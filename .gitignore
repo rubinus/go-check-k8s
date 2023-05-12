@@ -1,0 +1,6 @@
+.idea/*
+work/*
+data/*
+build/*
+dist/*
+.vscode
