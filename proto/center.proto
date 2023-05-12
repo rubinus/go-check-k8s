@@ -1,0 +1,22 @@
+syntax = "proto3";
+package centers;
+
+message Policy {
+  string Name = 1;
+  string Cmd = 2;
+}
+
+message CenterPolicies {
+  string ManagerIP = 1;
+  string Region = 2;
+  string ClusterId = 3;
+  string PrivateKey = 4;
+  string NodeUser = 5;
+  string NodePassword = 6;
+  string ClusterEnv = 7;
+  string PolicyType = 8;
+  int32 PolicyAmount = 9;
+  repeated Policy HostPolicies = 10;
+  repeated Policy ClusterPolicies = 11;
+}
+

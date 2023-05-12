@@ -1,0 +1,33 @@
+syntax = "proto3";
+package hosts;
+
+message Report {
+  string node_kernel = 1;
+  string node_os_version = 2;
+  string node_cpu = 3;
+  string node_mem = 4;
+  string node_network_traffic = 5;
+  string node_disk = 6;
+  string node_time = 7;
+  string node_running_time = 8;
+  string node_zombie = 9;
+  string node_docker = 10;
+  string node_kubelet = 11;
+  string node_kube_proxy = 12;
+  string node_opened_ports = 13;
+  int32 node_current_connection = 14;
+  int32 node_opened_ports_count = 15;
+  int32 node_opened_process = 16;
+  float node_load_average = 17;
+}
+
+message HostReport {
+  string check_id = 1; //此次巡检id
+  string cluster_id = 2; //集群id
+  string node_ip = 3; //节点ip地址
+  Report report = 4;  //巡检结果
+}
+
+
+
+

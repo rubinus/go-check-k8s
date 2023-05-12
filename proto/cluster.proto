@@ -1,0 +1,30 @@
+syntax = "proto3";
+package clusters;
+
+message Report {
+  string k8s_cluster_node_overview = 1;
+  string k8s_cluster_api_health_overview = 2;
+  string k8s_etcd_overview = 3;
+  string k8s_kube_kubelet_overview = 4;
+  string k8s_kube_apiserver_overview = 5;
+  string k8s_kube_controller_manager_overview = 6;
+  string k8s_kube_scheduler_overview = 7;
+  string k8s_kube_proxy_overview = 8;
+  string k8s_ingress_overview = 9;
+  string k8s_dns_overview = 10;
+  string k8s_metrics_server_overview = 11;
+  string k8s_kube_state_metrics_overview = 12;
+  string k8s_calico_overview = 13;
+  string k8s_flannel_overview = 14;
+  string k8s_cpu_memory_resource_overview = 15;
+}
+
+message ClusterReport {
+  string check_id = 1; //此次巡检id
+  string cluster_id = 2; //集群id
+  Report report = 3;  //巡检结果
+}
+
+
+
+

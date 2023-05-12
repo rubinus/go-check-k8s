@@ -1,0 +1,18 @@
+gather_facts: false
+hosts: all
+name: check_node
+tasks:
+- name: node_kernel
+  shell: uname -a
+- name: node_os_version
+  shell: cat /etc/redhat-release
+
+- name: check_node
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: node_kernel
+      shell:
+        uname -a
+
+
